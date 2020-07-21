@@ -9,5 +9,10 @@
   <ItemGroup>
     <PackageReference Include="CsvHelper" Version="15.0.5" />
   </ItemGroup>
+   <ItemGroup>
+    <ProjectReference Include="..\Microsoft.DotNet.Cci\Microsoft.DotNet.Cci.csproj" />
+    <ProjectReference Include="..\Microsoft.DotNet.Csv\Microsoft.DotNet.Csv.csproj" />
+    <ProjectReference Include="..\Microsoft.DotNet.ExceptionScanning\Microsoft.DotNet.ExceptionScanning.csproj" />
+  </ItemGroup>
 
 </Project>
