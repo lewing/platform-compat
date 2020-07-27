@@ -71,7 +71,11 @@ namespace Microsoft.DotNet.Scanner
 
             // Not all intrisincs are marked with attributes
             var docId = method.DocId();
-            if (docId.StartsWith("M:System.Runtime.Intrinsics") || docId.StartsWith("M:System.ByReference") || docId.StartsWith ("M:System.Text.Unicode.Utf8Utility.GetNonAsciiBytes"))
+            if (docId.StartsWith("M:System.Runtime.Intrinsics") ||
+                docId.StartsWith("M:System.ByReference") ||
+                docId.StartsWith ("M:System.Text.Unicode.Utf8Utility.GetNonAsciiBytes") ||
+                docId.StartsWith("M:Microsoft.VisualBasic.FileIO.FileSystem.ShellCopyOrMove") ||
+                docId.StartsWith("M:Microsoft.VisualBasic.FileIO.FileSystem.ShellDelete"))
             {
                 return ExceptionInfo.DoesNotThrow;
             }
